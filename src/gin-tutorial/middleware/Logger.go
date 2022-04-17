@@ -17,7 +17,7 @@ func Logger() gin.HandlerFunc {
 	// log file
 	fileName := path.Join(logFilePath, logFileName)
 	// write file
-	src, err := os.OpenFile(fileName, os.O_APPEND|os.O_WRONLY, os.ModeAppend)
+	src, err := os.OpenFile(fileName, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0777)
 	if err != nil {
 		fmt.Println("err", err)
 	}

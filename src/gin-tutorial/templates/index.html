@@ -1,0 +1,8 @@
+{{ template "header.html" }}
+
+{{ range .videos }}
+<h1>{{ .Title }}</h1>
+<p>{{ .Description }}</p>
+{{ end }}
+
+{{ template "footer.html" }}
