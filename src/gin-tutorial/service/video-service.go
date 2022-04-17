@@ -21,5 +21,8 @@ func (service *videoService) Save(video entity.Video) entity.Video {
 }
 
 func (service *videoService) FindAll() []entity.Video {
+	if service.videos == nil {
+		return []entity.Video{}
+	}
 	return service.videos
 }
